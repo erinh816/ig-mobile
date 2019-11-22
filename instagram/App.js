@@ -1,11 +1,17 @@
 import React from 'react';
 import TabNavigator from './navigation/TabNavigator.js';
 import reducer from './reducers/index.js'
-import { createStore, combineReducers } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+//if we create a store in here, every component below it will have access to this store
+import thunkMiddleware from 'redux-thunk';
+
+
+
+const middleware = applyMiddleware(thunkMiddleware);
 
 //create a store from the import of {createStore} and pass in reducer
-const store = createStore(reducer);
+const store = createStore(reducer, middleware);
 
 
 export default class App extends React.Component {
