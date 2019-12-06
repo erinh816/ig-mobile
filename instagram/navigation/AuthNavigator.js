@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from '../screens/Login.js';
-import Signup from '../screens/Signup.js';
+import SignupScreen from '../screens/Signup.js';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
@@ -9,9 +9,13 @@ import { createStackNavigator } from 'react-navigation-stack';
 const StackNavigator = createStackNavigator({
     Login: {
         screen: Login,
+        navigationOptions: {
+            header: null
+        }
+        // navigationOptions null will remove the header of the screen
     },
     Signup: {
-        screen: Signup
+        screen: SignupScreen
     }
 });
 

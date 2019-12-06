@@ -17,6 +17,10 @@ const user = (state = {}, action) => {
         case 'UPDATE_EMAIL':
             return { ...state, email: action.payload }
         //grabbing the initial state
+        case 'UPDATE_USERNAME':
+            return { ...state, username: action.payload }
+        case 'UPDATE_BIO':
+            return { ...state, bio: action.payload }
         case 'UPDATE_PASSWORD':
             return { ...state, password: action.payload }
         default:
