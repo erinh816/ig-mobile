@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { add, subtract } from '../actions/index.js'
 import styles from '../styles.js'
 
+
 class Home extends React.Component {
     // state = {
     //     count: 10
@@ -29,7 +30,7 @@ class Home extends React.Component {
         return (
             <View style={styles.container} >
                 <Text>Home Screen{this.props.counter}</Text>
-                <Text>How Many Apps   {this.props.count}</Text>
+                <Text>How Many Apps   {this.props.counter}</Text>
                 <Button title='ADD' onPress={() => this.props.dispatch(add())} />
                 <Button title='SUBTRACT' onPress={() => this.props.dispatch(subtract())} />
             </View>
@@ -52,6 +53,7 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Home)
+//connect the state to the component
 
 
 //but what is the count in     <Text>How Many Apps   {this.props.count}</Text>    <Text>How Many Apps   {this.props.count}</Text>

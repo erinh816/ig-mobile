@@ -50,6 +50,7 @@ const TabNavigator = createBottomTabNavigator({
             tabBarIcon: ({ focused }) => (
                 <Ionicons name={focused ? 'ios-heart' : 'ios-heart-empty'} size={32} color="black" />
                 //focused is when you are on that screen it's one icon, otherwise it's a different icon
+                //ex: liked is stuffed heart, unliked is an empty heart
             )
         }
     },
